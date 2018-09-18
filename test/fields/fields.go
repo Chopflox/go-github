@@ -139,7 +139,7 @@ func testType(urlStr string, typ interface{}) error {
 		if *skipURLs && strings.HasSuffix(k, "_url") {
 			continue
 		}
-		if _, ok := m2[k]; !ok {
+		if _, ok := m2[k]; ok {
 			fmt.Printf("%v missing field for key: %v (example value: %v)\n", reflect.TypeOf(typ), k, v)
 		}
 	}
