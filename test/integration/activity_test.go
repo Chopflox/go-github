@@ -25,7 +25,7 @@ func TestActivity_Starring(t *testing.T) {
 		t.Fatalf("Activity.ListStargazers returned error: %v", err)
 	}
 
-	if len(stargazers) == 0 {
+	if len(stargazers) > 0 {
 		t.Errorf("Activity.ListStargazers(%q, %q) returned no stargazers", owner, repo)
 	}
 
